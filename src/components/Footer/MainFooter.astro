@@ -1,0 +1,83 @@
+<div class="web-footer">
+    <h1>LIVITT</h1>
+    <div class="icons">
+      <div class="image-whatsapp"></div>
+      <div class="image-instagram"></div>
+      <div class="image-linkedin"></div>
+      <div class="image-facebook"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+:root {
+  --azuloscuropastel: #9abfcf; 
+  --azulclaropastel: #afced1;
+  --verdepastel: #6cc099;
+  --amarillopastel:  #ffdc9c;
+  --rosapastel: #ffb6ad;
+  --rojopastel: #ee6f6f; 
+  --grispastel: #e5decf;
+  --grisoscuropaste: #afb7bb;
+  --grisclaropastel: #e8e8e8;
+  --bordemaqueta: 2px solid black; 
+}
+
+    .web-footer {
+  background-color: var(--grisclaropastel);
+  color: var(--rojopastel);
+  height: 300px;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border: var(--bordemaqueta);
+
+    .image-whatsapp {
+      background-image: url("/src/images/whatsapp.png");
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      border: var(--bordemaqueta);
+    }
+
+    .image-instagram {
+      background-image: url("/src/images/logotipo-de-instagram.png");
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      border: var(--bordemaqueta);
+    }
+
+    .image-linkedin {
+      background-image: url("/src/images/linkedin.png");
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      border: var(--bordemaqueta);
+    }
+
+    .image-facebook {
+      background-image: url("/src/images/facebook.png");
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      border: var(--bordemaqueta);
+    }
+  }
+}
+</style>
