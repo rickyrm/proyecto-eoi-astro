@@ -1,19 +1,21 @@
 ---
-import NavBar from '../components/NavBar.astro';
-import MainHero from '../components/MainHero.astro';
-import MainDescription from '../components/MainDescription.astro';
-import MainTeam from '../components/MainTeam.astro';
-import MainFaqs from '../components/MainFaqs.astro';
-import MainContact from '../components/MainContact.astro';
-import MainFooter from '../components/MainFooter.astro';
-
+import NavBar from '../components/NavBar/NavBar.astro';
+import MainDescription from '../components/Description/MainDescription.astro';
+import MainTeam from '../components/Team/MainTeam.astro';
+import MainFaqs from '../components/FAQS/MainFaqs.astro';
+import MainContact from '../components/Contact/MainContact.astro';
+import MainFooter from '../components/Footer/MainFooter.astro';
+import MainWelcome from '../components/Welcome/MainWelcome.astro';
 ---
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livitt</title>
+</head>
 
 <body>
 <NavBar/>
-<MainHero/>
+<MainWelcome/>
 <MainDescription/>
 <MainTeam/>
 <MainFaqs/>

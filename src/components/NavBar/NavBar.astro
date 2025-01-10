@@ -1,73 +1,98 @@
 <div class="web-header">
     <h1>Livitt</h1>
     <div class="buttons">
-    <div class="button">Home</div>
-    <div class="button">Sobre la app</div>
-    <div class="button">Sobre nosotros</div>
-    <div class="button">FAQS</div>
-    <div class="button">Contacto</div>
+        <a href="/" class="button">Home</a>
+        <a href="/#sobre-la-app" class="button">Sobre la app</a>
+        <a href="/#sobre-nosotros" class="button">Sobre nosotros</a>
+        <a href="/#faqs" class="button">FAQS</a>
+        <a href="/contact" class="button">Contacto</a>
+        <a href="/register" class="button">Registrarse</a>
+        <a href="/login" class="button-login">Iniciar Sesión</a>
+        
     </div>
 </div>
 
 <style>
-
 :root {
---azuloscuropastel: #9abfcf; 
---azulclaropastel: #afced1;
---verdepastel: #6cc099;
---amarillopastel:  #ffdc9c;
---rosapastel: #ffb6ad;
---rojopastel: #ee6f6f; 
---grispastel: #e5decf;
---grisoscuropaste: #afb7bb;
---grisclaropastel: #e8e8e8;
---bordemaqueta: 2px solid black; 
+    --azuloscuropastel: #9abfcf; 
+    --azulclaropastel: #afced1;
+    --verdepastel: #6cc099;
+    --amarillopastel:  #ffdc9c;
+    --rosapastel: #ffb6ad;
+    --rojopastel: #ee6f6f; 
+    --grispastel: #e5decf;
+    --grisoscuropaste: #afb7bb;
+    --grisclaropastel: #e8e8e8;
+    --bordemaqueta: 2px solid black; 
 }
 
 .web-header {
-background-color: var(--grisclaropastel);
-height: 100px;
-width: 100%;
-display: flex;
-flex-direction: row;
-    
-h1 {
-font-size: 50px;
-height: 50px;
-width: 30%;
-color: var(--rojopastel); 
-padding: 0 0 0 50px;
-display: flex;
-flex-direction: column;
-text-align: left;
-justify-content: center;
-background-color: transparent;
+    background-color: var(--grisclaropastel);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
+
+.web-header h1 {
+    font-size: 50px;
+    height: 50px;
+    width: 30%;
+    color: var(--rojopastel); 
+    padding: 0 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .buttons {
-height: 100px;
-width: 70%;
-display: flex;
-flex-direction: row;
-text-align: right;
-justify-content: center; 
-background-color: transparent;
+    height: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: center; 
+    background-color: transparent;
 }
 
 .button {
-width: 16.5%;
-display: flex;
-flex-direction: row;
-text-align: center;
-justify-content: center;
-padding-top: 40px;
-color: var(--rojopastel);
-
-&:hover {
-background-color: var(--rojopastel);
-color: var(--grisclaropastel); 
-cursor: pointer;
+    width: 16.5%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--rojopastel);
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 16px;
+    font-weight: bold;
 }
+
+.button:hover {
+    background-color: var(--rojopastel);
+    color: var(--grisclaropastel); 
+    cursor: pointer;
+}
+.button-login {
+    width: 16.5%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--rojopastel);
+    color: var(--grisclaropastel);
+    
+}
+
+.button-login:hover {
+    background-color: rgba(240, 143, 114, 0.616);
+    color: rgba(41, 37, 37, 0.671);
+    cursor: pointer;
 }
 </style>
