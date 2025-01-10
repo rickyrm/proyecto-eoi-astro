@@ -1,105 +1,83 @@
 ---
-
+import ButtonJoin from "./ButtonJoin.astro"
 ---
 
-<div id="home" class="welcome">
-	<div class="image-1">
-  <h1>BIENVENID@ A Livitt</h1>
-  <div class="text">
-  <h3>Repartir tareas, multiplicar sonrisas</h3>
-  <p>La app que convierte tu piso en un equipo imbatible.</p>
+<script>
+  document.querySelectorAll(".button").forEach(button => {
+  button.addEventListener("click", () => {
+    const sectionId = button.getAttribute("data-target"); // Usa data-target directamente
+    const section = document.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+</script>
+
+<section id="home" class="welcome">
+  <div class="title">
+    <h1>Liviit</h1>
+    <div style="background-color: transparent;">
+      <img src="/src/images/logo2.png" alt="Logo Liviit"> <!-- Nuevo logo de la app -->
+    </div>
   </div>
-  <div class="button-start">Empezar</div>
-	</div>
-  </div>
+  <h3>Porque la convivencia no tiene que ser complicada.</h3>
+  </ButtonJoin>
+</section>
+
 
 <style>
-
 :root {
---azuloscuropastel: #9abfcf; 
---azulclaropastel: #afced1;
---verdepastel: #6cc099;
---amarillopastel:  #ffdc9c;
---rosapastel: #ffb6ad;
---rojopastel: #ee6f6f; 
---grispastel: #e5decf;
---grisoscuropaste: #afb7bb;
---grisclaropastel: #e8e8e8;
---bordemaqueta: 2px solid black; 
+  --azuloscuropastel: #9abfcf; 
+  --azulclaropastel: #afced1;
+  --verdepastel: #6cc099;
+  --amarillopastel:  #ffdc9c;
+  --rosapastel: #ffb6ad;
+  --rojopastel: #ee6f6f; 
+  --grispastel: #e5decf;
+  --grisoscuropastel: #afb7bb;
+  --grisclaropastel: #e8e8e8;
+  --bordemaqueta: 2px solid black; 
 }
 
-	.welcome {
+.welcome {
+  background: linear-gradient(to bottom, var(--azulclaropastel), white);
   height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
-  
-
-  .image-1 {
-    background-image: url("/src/images/Livitt_\(2\).jpg");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-  }
-
-  h1 {
-    height: 200px;
-    width: 96%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    
-  }
-
-  .text {
-    height: 125px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-
-    h3 {
-      color: black;
-      
-    }
-
-    p {
-      color: black;
-      
-    }
-  }
-
-  .button-start {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--rojopastel);
-    color: white;
-    border-radius: 20px;
-    height: 75px;
-    width: 150px;
-
-    &:hover {
-      background-color: white;
-      color: var(--rojopastel);
-      border: 2px solid var(--rojopastel);
-      cursor: pointer;
-    }
-  }
+  justify-content: center;
+  text-align: center;
 }
 
+.welcome .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.welcome .title h1 {
+  color: var(--rojopastel);
+  font-size: 100px;
+  margin: 0;
+}
+
+.welcome .title img {
+  padding-bottom: 8px; /* Ajuste fino */
+  height: 80px;
+  width: auto;
+  background-color: transparent;
+  
+}
+
+.welcome h3 {
+  color: var(--rojopastel);
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 50px;
+}
 </style>

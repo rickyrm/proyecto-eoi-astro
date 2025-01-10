@@ -1,10 +1,14 @@
-<div id="contacto" class="contact">
-    <h1>¿TODAVÍA SIGUES CON DUDAS?</h1>
-    <h3>Puedes contactarnos a través del siguiente formulario</h3>
-    <div class="button-contact">Pincha aquí</div>
-  </div>
+<section class="contact">
+  <h1>¡Contacta con nosotros!</h1>
+  <h3>¿Tienes algún problema?</h3>
+  <p>Puedes contactarnos a través del siguiente formulario</p>
+  <button class="button-contact" id="contact">Contacto</button>
+</section>
+<p></p>
 
   <style>
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
 :root {
   --azuloscuropastel: #9abfcf; 
   --azulclaropastel: #afced1;
@@ -13,48 +17,46 @@
   --rosapastel: #ffb6ad;
   --rojopastel: #ee6f6f; 
   --grispastel: #e5decf;
-  --grisoscuropaste: #afb7bb;
+  --grisoscuropastel: #afb7bb;
   --grisclaropastel: #e8e8e8;
   --bordemaqueta: 2px solid black; 
 }
 
-    .contact{
+.contact{
   color: var(--rojopastel);
-  background-color: transparent;
+  background: linear-gradient(to left, var(--azulclaropastel), white);
   height: 300px;
   width: 100%;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .button-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--rojopastel);
-    color: white;
-    border-radius: 20px;
-    height: 75px;
-    width: 150px;
-
-    &:hover {
-      background-color: white;
-      color: var(--rojopastel);
-      border: 2px solid var(--rojopastel);
-      cursor: pointer;
-    }
-  }
-
-  
 }
+
+.contact .button-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--rojopastel);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  height: 56px;
+  width: 156px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box; /* Evita que el padding afecte las dimensiones */
+  line-height: normal; /* Evita conflictos con el alineamiento vertical */
+  box-shadow: 0 1px 3px black;
+}
+
+.button-contact:hover {
+  background-color: white;
+  color: var(--rojopastel);
+  border: 2px solid var(--rojopastel);
+}
+
   </style>

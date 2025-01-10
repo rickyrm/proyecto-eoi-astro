@@ -1,40 +1,41 @@
-<div id="sobre-nosotros" class="team">
-      <h1>Equipo</h1>
-      <div class="people">
-        <div class="person">
-          <div class="image-person-1"></div>
-          <h3>Alba Reyes Concepción</h3>
-          <p>Apasionada por la ciencia y el arte, Alba combina su dedicación, creatividad y orientación al detalle
-            para afrontar cada proyecto con excelencia. Siempre en busca de nuevos retos, cree firmemente que el
-            aprendizaje continuo y un enfoque centrado en las personas son la clave para lograr un impacto
-            significativo.</p>
-        </div>
-        <div class="person">
-          <div class="image-person-2"></div>
-          <h3>Alexia Cabrera Bolaños</h3>
-          <p>Impulsada por su deseo de aprender y mejorar, Alexia considera que la pasión, la dedicación y una
-            orientación clara hacia las necesidades del usuario son esenciales para el éxito de cualquier proyecto.
-            Está siempre lista para enfrentar nuevos desafíos y superarlos con creatividad y precisión.</p>
-        </div>
-        <div class="person">
-          <div class="image-person-3"></div>
-          <h3>Ricardo Rivero Martín</h3>
-          <p>En constante búsqueda de crecimiento y aprendizaje, Ricardo cree que la clave para crear proyectos
-            exitosos es la combinación de pasión, dedicación y un enfoque centrado en el usuario. Siempre dispuesto a
-            asumir nuevos desafíos.</p>
-        </div>
-        <div class="person">
-          <div class="image-person-4"></div>
-          <h3>Omar Mourdi Ahel</h3>
-          <p>Con una mentalidad en constante evolución, Omar se caracteriza por su perseverancia y enfoque en alcanzar
-            metas. Cree firmemente que el aprendizaje continuo y la colaboración son pilares fundamentales para
-            construir proyectos que marquen la diferencia.</p>
-        </div>
-      </div>
-    </div>
+<section id="about-us" class="team">
+  <h1>Equipo</h1>
+  <div class="people">
+    <article class="person">
+      <img class="image-person" src="/src/images/foto_alexia.JPG" alt="Foto de Alexia">
+      <h3>Alexia Cabrera Bolaños</h3>
+      <p>Impulsada por su deseo de aprender y mejorar, Alexia considera que la pasión, la dedicación y una
+        orientación clara hacia las necesidades del usuario son esenciales para el éxito de cualquier proyecto. Está
+        siempre lista para enfrentar nuevos desafíos y superarlos con creatividad y precisión.</p>
+    </article>
+    <article class="person">
+      <img class="image-person" src="/src/images/foto_omar.jpeg" alt="Foto de Omar">
+      <h3>Omar Mourdi Ahel</h3>
+      <p>Con una mentalidad en constante evolución, Omar se caracteriza por su perseverancia y enfoque en alcanzar
+        metas. Cree firmemente que el aprendizaje continuo y la colaboración son pilares fundamentales para
+        construir proyectos que marquen la diferencia.</p>
+    </article>
+    <article class="person">
+      <img class="image-person" src="/src/images/foto_alba.jpg" alt="Foto de Alba">
+      <h3>Alba Reyes Concepción</h3>
+      <p>Apasionada por la ciencia y el arte, Alba combina su dedicación, creatividad y orientación al detalle para
+        afrontar cada proyecto con excelencia. Siempre en busca de nuevos retos, cree firmemente que el aprendizaje
+        continuo y un enfoque centrado en las personas son la clave para lograr un impacto significativo.</p>
+    </article>
+    <article class="person">
+      <img class="image-person" src="/src/images/foto_ricardo.jpg" alt="Foto de Ricardo">
+      <h3>Ricardo Rivero Martín</h3>
+      <p>En constante búsqueda de crecimiento y aprendizaje, Ricardo cree que la clave para crear proyectos exitosos
+        es la combinación de pasión, dedicación y un enfoque centrado en el usuario. Siempre dispuesto a asumir
+        nuevos desafíos.</p>
+    </article>
+  </div>
+</section>
 
-    <style>
-        :root {
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
   --azuloscuropastel: #9abfcf; 
   --azulclaropastel: #afced1;
   --verdepastel: #6cc099;
@@ -42,104 +43,59 @@
   --rosapastel: #ffb6ad;
   --rojopastel: #ee6f6f; 
   --grispastel: #e5decf;
-  --grisoscuropaste: #afb7bb;
+  --grisoscuropastel: #afb7bb;
   --grisclaropastel: #e8e8e8;
   --bordemaqueta: 2px solid black; 
 }
 
+/* Cambiar "Equipo" por Testimonios para vender, generar confianza... */ 
 .team {
   color: var(--rojopastel);
-  background-color: transparent;
-  height: auto;
+  background: linear-gradient(to bottom, var(--grisclaropastel), white);
+  height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
+}
 
-  .people {
-    display: flex;
-    gap: 20px; 
-    justify-content: center; 
-    align-items: flex-start; /* Alinear contenido superior */
-    flex-wrap: wrap; /* Permite que las tarjetas salten de línea en pantallas pequeñas */
+.team h1{
+  font-size: 40px;
+}
 
-    h3{
-      text-align: center;
-      font-size: 24px;
-      margin: 20px 0;
-    }
+.team .people {
+  display: flex;
+  gap: 20px; 
+  justify-content: center; 
+  align-items: flex-start; /* Alinear contenido superior */
+  flex-wrap: wrap; /* Permite que las tarjetas salten de línea en pantallas pequeñas */
+}
 
-    p{
-      text-align: center;
-      margin: 20px 0;
-      color: var(--rojopastel);
-      font-size: 16px;
-      line-height: 1.5;
-    }
+.team .people .person {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  border: var(--rojopastel); 
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%; 
+  height: auto;
+}
 
-    .person {
-      display: flex;
-      flex-direction: column; 
-      align-items: center;
-      justify-content: center;
-      border: var(--rojopastel); 
-      border-radius: 10px;
-      padding: 20px;
-      width: 20%; 
-      height: auto;
-    }
+.team .people .person .image-person {
+  height: 150px; 
+  width: 150px; 
+  border-radius: 50%; 
+  margin-bottom: 10px;
+  border: 2px solid var(--rojopastel);
+  object-fit: cover;
+}
 
-      .image-person-1 {
-        background-image: url("/public/images/foto_alba.jpg");
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        height: 150px; 
-        width: 150px; 
-        border-radius: 50%; 
-        margin-bottom: 10px;
-        border: 2px solid var(--rojopastel);
-      }
-
-
-      .image-person-2 {
-        background-image: url("/public/images/foto_ricardo.jpg");
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
-        height: 150px; 
-        width: 150px; 
-        border-radius: 50%; 
-        margin-bottom: 10px;
-        border: 2px solid var(--rojopastel);
-      }
-    }
-  } 
-
-
-    .image-person-3 {
-      background-image: url("/src/images/foto_ricardo.jpg");
-      background-size: cover;
-      background-position: center; 
-      background-repeat: no-repeat;
-      height: 150px; 
-      width: 150px; 
-      border-radius: 50%; 
-      margin-bottom: 10px;
-      border: 2px solid var(--rojopastel);
-    }
-
-    .image-person-4 {
-      background-image: url("/src/images/foto_alba.jpg");
-      background-size: cover;
-      background-position: center; 
-      background-repeat: no-repeat;
-      height: 150px; 
-      width: 150px; 
-      border-radius: 50%; 
-      margin-bottom: 10px;
-      border: 2px solid var(--rojopastel);
-    }
+.team .people .person p{
+  justify-content: center;
+  align-items: center;
+}
 
     </style>

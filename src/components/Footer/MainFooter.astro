@@ -1,15 +1,46 @@
-<div class="web-footer">
-    <h1>LIVITT</h1>
-    <div class="icons">
-      <div class="image-whatsapp"></div>
-      <div class="image-instagram"></div>
-      <div class="image-linkedin"></div>
-      <div class="image-facebook"></div>
+<footer class="web-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h2 class="about-liviit">Sobre Liviit</h2>
+      <p>
+        Liviit es una app diseñada para mejorar la convivencia en pisos compartidos,
+        ofreciendo herramientas para la organización y gestión del hogar. ¡Haz que vivir
+        juntos sea más sencillo y agradable!
+      </p>
+    </div>
+    <div class="footer-section links">
+      <h2 class="fast-link">Enlaces rápidos</h2>
+      <ul>
+        <li><a href="/src/index.html#home">Inicio</a></li>
+        <li><a href="/src/index.html#about">Sobre la app</a></li>
+        <li><a href="/src/index.html#about-us">Equipo</a></li>
+        <li><a href="/src/faqs.html">FAQs</a></li>
+        <li><a href="/src/contact.html">Contacto</a></li>
+        <li><a href="/src/login.html">Iniciar sesión</a></li>
+        <li><a href="/src/registrer.html">Registro</a></li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h2 class="follow-me">Síguenos</h2>
+      <p>Conéctate con nosotros en redes sociales:</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="/src/icons/facebook-icon.svg"
+            alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="/src/icons/twitter-icon.svg"
+            alt="Twitter"></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
+            src="/src/icons/instagram-icon.svg" alt="Instagram"></a>
+      </div>
     </div>
   </div>
-</div>
+  <div class="footer-bottom">
+    <p class="politic">&copy; 2024 Liviit. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
 :root {
   --azuloscuropastel: #9abfcf; 
   --azulclaropastel: #afced1;
@@ -18,12 +49,11 @@
   --rosapastel: #ffb6ad;
   --rojopastel: #ee6f6f; 
   --grispastel: #e5decf;
-  --grisoscuropaste: #afb7bb;
+  --grisoscuropastel: #afb7bb;
   --grisclaropastel: #e8e8e8;
   --bordemaqueta: 2px solid black; 
 }
-
-    .web-footer {
+.web-footer {
   background-color: var(--grisclaropastel);
   color: var(--rojopastel);
   height: 300px;
@@ -31,53 +61,90 @@
   display: flex; 
   flex-direction: column;
   text-align: center;
+}
 
-  .icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    border: var(--bordemaqueta);
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: var(--grisoscuropastel);
+}
 
-    .image-whatsapp {
-      background-image: url("/src/images/whatsapp.png");
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      border: var(--bordemaqueta);
-    }
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  color: var(--grisclaropastel);
+}
 
-    .image-instagram {
-      background-image: url("/src/images/logotipo-de-instagram.png");
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      border: var(--bordemaqueta);
-    }
+.footer-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-    .image-linkedin {
-      background-image: url("/src/images/linkedin.png");
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      border: var(--bordemaqueta);
-    }
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+  color: white; 
+}
 
-    .image-facebook {
-      background-image: url("/src/images/facebook.png");
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      width: 100%;
-      border: var(--bordemaqueta);
-    }
-  }
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links img {
+  height: 30px;
+  width: auto;
+  color: white;
+}
+
+.footer-bottom {
+  background-color: var(--grisclaropastel);
+  color: var(--grisclaropastel);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  border-top: 1px solid var(--grisoscuropastel);
+}
+
+.politic {
+  color: var(--rojopastel);
+}
+
+.follow-me{
+  color: var(--rojopastel);
+}
+
+.about-liviit{
+  color: var(--rojopastel);
+}
+
+.fast-link{
+  color: var(--rojopastel);
+}
+
+.separator {
+  color: transparent
 }
 </style>
