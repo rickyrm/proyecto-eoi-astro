@@ -1,18 +1,13 @@
-<div id="faqs" class="faqs">
-      <h1>FAQS</h1>
-      <h3>Pregunta 1</h3>
-      <p>Respuesta 1</p>
-      <h3>Pregunta 2</h3>
-      <p>Respuesta 2</p>
-      <h3>Pregunta 3</h3>
-      <p>Respuesta 3</p>
-      <h3>Pregunta 4</h3>
-      <p>Respuesta 4</p>
-      <h3>Pregunta 5</h3>
-      <p>Respuesta 5</p>
-    </div>
+<section class="questions">
+  <h1>FAQS</h1>
+  <h3>¿Tienes alguna duda?</h3>
+  <p>Puedes pinchar el siguiente botón y te las resolvemos</p>
+  <button class="button-faqs" id="faqs">Pincha aquí</button>
+</section>
+<p></p>
 
-    <style>
+
+<style>
 :root {
   --azuloscuropastel: #9abfcf; 
   --azulclaropastel: #afced1;
@@ -26,31 +21,42 @@
   --bordemaqueta: 2px solid black; 
 }
 
-      .faqs {
-  background-color: transparent;
-  height: 800px;
+.questions {
+  color: var(--rojopastel);
+  background: linear-gradient(to right, var(--azulclaropastel), white);
+  height: 300px;
   width: 100%;
   display: flex; 
   flex-direction: column;
-
-  h1 {
-    color: var(--rojopastel);
-    text-align: center;
-  }
-
-  h3 {
-    background-color: var(--rojopastel);
-    color: white;
-    padding-left: 75px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  p {
-    background-color: white;
-    color: var(--rojopastel);
-    padding-left: 75px;
-  }
+  align-items: center;
+  justify-content: center;
 }
+
+.questions .button-faqs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--rojopastel);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  height: 56px;
+  width: 156px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box; /* Evita que el padding afecte las dimensiones */
+  line-height: normal; /* Evita conflictos con el alineamiento vertical */
+  box-shadow: 0 1px 3px black;
+}
+
+.button-faqs:hover {
+  background-color: white;
+  color: var(--rojopastel);
+  border: 2px solid var(--rojopastel);
+}
+
 
     </style>

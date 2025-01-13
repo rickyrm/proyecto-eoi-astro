@@ -1,10 +1,13 @@
-<div id="contacto" class="contact">
-    <h1>¿TODAVÍA SIGUES CON DUDAS?</h1>
-    <h3>Puedes contactarnos a través del siguiente formulario</h3>
-    <a href="/contact" class="button-contact">Pincha aquí</a>
-  </div>
+<section class="questions">
+  <h1>FAQS</h1>
+  <h3>¿Tienes alguna duda?</h3>
+  <p>Puedes pinchar el siguiente botón y te las resolvemos</p>
+  <button class="button-faqs" id="faqs">Pincha aquí</button>
+</section>
+<p></p>
 
-  <style>
+
+<style>
 :root {
   --azuloscuropastel: #9abfcf; 
   --azulclaropastel: #afced1;
@@ -18,44 +21,42 @@
   --bordemaqueta: 2px solid black; 
 }
 
-    .contact{
+.questions {
   color: var(--rojopastel);
-  background-color: transparent;
+  background: linear-gradient(to right, var(--azulclaropastel), white);
   height: 300px;
   width: 100%;
   display: flex; 
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.questions .button-faqs {
+  display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .button-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--rojopastel);
-    color: white;
-    border-radius: 20px;
-    height: 75px;
-    width: 150px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: white;
-      color: var(--rojopastel);
-      border: 2px solid var(--rojopastel);
-      cursor: pointer;
-    }
-  }
-
-  
+  text-align: center;
+  background-color: var(--rojopastel);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  height: 56px;
+  width: 156px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box; /* Evita que el padding afecte las dimensiones */
+  line-height: normal; /* Evita conflictos con el alineamiento vertical */
+  box-shadow: 0 1px 3px black;
 }
-  </style>
+
+.button-faqs:hover {
+  background-color: rgb(245, 237, 237);
+  color: var(--rojopastel);
+  border: 2px solid var(--rojopastel);
+}
+
+
+    </style>
