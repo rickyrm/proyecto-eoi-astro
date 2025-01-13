@@ -1,30 +1,20 @@
 ---
-import NavBar from '../components/NavBar/NavBar.astro';
-import MainWelcome from '../components/Welcome/MainWelcome.astro';
-import MainDescription from '../components/Description/MainDescription.astro';
-import MainTeam from '../components/Team/MainTeam.astro';
-import MainFaqs from '../components/FAQS/MainFaqs.astro'; 
-import MainContact from '../components/Contact/MainContact.astro';
-import MainFooter from '../components/Footer/MainFooter.astro';
-
+import NavBar from "../components/NavBar/NavBar.astro";
+import MainWelcome from "../components/Welcome/MainWelcome.astro";
+import MainDescription from "../components/Description/MainDescription.astro";
+import MainTeam from "../components/Team/MainTeam.astro";
+import MainFaqs from "../components/FAQS/MainFaqs.astro";
+import MainContact from "../components/Contact/MainContact.astro";
+import MainFooter from "../components/Footer/MainFooter.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
-    body {
-        background-color: white;
-        margin: 0;
-        padding: 0;
-        font-family: Questrial, sans-serif;
-    }
-</style>
-
-<body>
-    <NavBar/>
-    <MainWelcome/>
-    <MainDescription/>
-    <MainTeam/>
-    <MainFaqs/>
-    <MainContact/>
-    <MainFooter/>
-</body>
+<Layout>
+    <NavBar />
+    <MainWelcome />
+    <MainDescription />
+    <MainTeam />
+    <MainFaqs />
+    <MainContact />
+    <MainFooter />
+</Layout>

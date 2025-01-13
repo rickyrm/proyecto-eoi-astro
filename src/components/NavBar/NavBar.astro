@@ -1,84 +1,81 @@
-
-
 <header class="web-header">
     <h1>Liviit</h1>
     <nav class="buttons" aria-label="Menú de navegación principal">
         <button class="button" data-target="home">Home</button>
         <button class="button" data-target="about">Sobre la app</button>
         <button class="button" data-target="about-us">Sobre nosotros</button>
-        <button class="button" id="faqs">FAQS</button>
+        <a class="button" id="faqs" href="/faqs">FAQS</a>
         <button class="button" id="contact">Contacto</button>
         <button class="button" id="login">Iniciar sesión</button>
         <button class="button" id="registrer">Registrarse</button>
     </nav>
 </header>
 
-
 <style>
-:root {
---azuloscuropastel: #9abfcf; 
---azulclaropastel: #afced1;
---verdepastel: #6cc099;
---amarillopastel:  #ffdc9c;
---rosapastel: #ffb6ad;
---rojopastel: #ee6f6f; 
---grispastel: #e5decf;
---grisoscuropastel: #afb7bb;
---grisclaropastel: #e8e8e8;
---bordemaqueta: 2px solid black; 
-}
+    :root {
+        --azuloscuropastel: #9abfcf;
+        --azulclaropastel: #afced1;
+        --verdepastel: #6cc099;
+        --amarillopastel: #ffdc9c;
+        --rosapastel: #ffb6ad;
+        --rojopastel: #ee6f6f;
+        --grispastel: #e5decf;
+        --grisoscuropastel: #afb7bb;
+        --grisclaropastel: #e8e8e8;
+        --bordemaqueta: 2px solid black;
+    }
 
-header {
-background-color: var(--grisclaropastel);
-height: 150px;
-width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-}
+    header {
+        background-color: var(--grisclaropastel);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-header h1 {
-font-size: 100px;
-height: 150px;
-width: 20%;
-color: var(--rojopastel); 
-padding-left: 50px;
-display: flex;
-flex-direction: column;
-text-align: left;
-justify-content: center;
-background-color: transparent;
-}
+    header h1 {
+        font-size: 100px;
+        height: 150px;
+        width: 20%;
+        color: var(--rojopastel);
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        background-color: transparent;
+    }
 
-nav {
-height: 150px;
-width: 80%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center; 
-background-color: transparent;
-padding-right: 16px;
-}
+    nav {
+        height: 150px;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        padding-right: 16px;
+    }
 
-button {
-height: 100%;
-width: 14.29%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-color: var(--rojopastel);
-background-color: transparent;
-font-size: 20px;
-font-family: Questrial, sans-serif;
-border: transparent;
-}
+    .button {
+        height: 100%;
+        width: 14.29%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: var(--rojopastel);
+        background-color: transparent;
+        font-size: 20px;
+        font-family: Questrial, sans-serif;
+        text-decoration: none;
+        border: transparent;
+    }
 
-button:hover {
-background-color: var(--rojopastel);
-color: var(--grisclaropastel); 
-cursor: pointer;
-}
-
+    .button:hover {
+        background-color: var(--rojopastel);
+        color: var(--grisclaropastel);
+        cursor: pointer;
+    }
 </style>
