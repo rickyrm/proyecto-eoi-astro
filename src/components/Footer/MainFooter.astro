@@ -1,6 +1,33 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleccionamos todos los enlaces del pie de página
+  const footerLinks = document.querySelectorAll(".footer-links a");
+
+  // Iteramos sobre los enlaces para asignar el comportamiento
+  footerLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href");
+
+      // Si el enlace contiene "/index.html" y tiene un hash (#), redirigir a la sección correspondiente
+      if (href.includes("/index.html")) {
+        const targetSection = href.split("#")[1]; // Obtenemos la sección de la URL
+        if (targetSection) {
+          // Cambia la URL y lleva al hash correspondiente en index.html
+          window.location.href = `/index.html#${targetSection}`;
+        }
+      } else {
+        // Si el enlace es para otras páginas .html, navegar a ellas normalmente
+        window.location.href = href;
+      }
+      event.preventDefault(); // Prevenimos la acción por defecto
+    });
+  });
+});
+</script>
+
 <footer class="web-footer">
   <div class="footer-content">
-    <div class="footer-section about">
+    <div class="footer-about">
       <h2 class="about-liviit">Sobre Liviit</h2>
       <p>
         Liviit es una app diseñada para mejorar la convivencia en pisos compartidos,
@@ -8,33 +35,27 @@
         juntos sea más sencillo y agradable!
       </p>
     </div>
-    <div class="footer-section links">
+    <div class="footer-links">
       <h2 class="fast-link">Enlaces rápidos</h2>
       <ul>
-        <li><a href="/src/index.html#home">Inicio</a></li>
-        <li><a href="/src/index.html#about">Sobre la app</a></li>
-        <li><a href="/src/index.html#about-us">Equipo</a></li>
-        <li><a href="/src/faqs.html">FAQs</a></li>
-        <li><a href="/src/contact.html">Contacto</a></li>
-        <li><a href="/src/login.html">Iniciar sesión</a></li>
-        <li><a href="/src/registrer.html">Registro</a></li>
+        <div class="column-1">
+          <li><a href="/index.html#home">Inicio</a></li> <!-- Agregar hash para sección -->
+          <li><a href="/index.html#about">Sobre la app</a></li> <!-- Agregar hash para sección -->
+          <li><a href="/index.html#about-us">Equipo</a></li> <!-- Agregar hash para sección -->
+        </div>
+        <div class="column-2">
+          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/contact.html">Contacto</a></li>
+        </div>
+        <div class="column-3">
+          <li><a href="/login.html">Iniciar sesión</a></li>
+          <li><a href="/registrer.html">Registro</a></li>
+        </div>
       </ul>
-    </div>
-    <div class="footer-section social">
-      <h2 class="follow-me">Síguenos</h2>
-      <p>Conéctate con nosotros en redes sociales:</p>
-      <div class="social-links">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="/src/icons/facebook-icon.svg"
-            alt="Facebook"></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="/src/icons/twitter-icon.svg"
-            alt="Twitter"></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img
-            src="/src/icons/instagram-icon.svg" alt="Instagram"></a>
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="politic">&copy; 2024 Liviit. Todos los derechos reservados.</p>
+    <p class="politic">&copy; 2025 Liviit. Todos los derechos reservados.</p>
   </div>
 </footer>
 
@@ -56,84 +77,98 @@
 .web-footer {
   background-color: var(--grisclaropastel);
   color: var(--rojopastel);
-  height: 300px;
+  height: 200px;
   width: 100%;
   display: flex; 
   flex-direction: column;
   text-align: center;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .footer-content {
+  height: 150px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background-color: var(--grisoscuropastel);
+  background-color: #6c7a89;
 }
 
-.footer-section {
-  flex: 1;
-  padding: 10px;
-  color: var(--grisclaropastel);
+.footer-about {
+  height: 150px;
+  width: 60%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 32px;
 }
 
-.footer-section h2 {
+.footer-links {
+  height: 150px;
+  width: 40%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+
+h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.footer-section p,
-.footer-section ul {
+p, ul {
   font-size: 14px;
   margin: 0;
-  line-height: 1.6;
   color: white; 
 }
 
-.footer-section ul {
+ul {
+  width: 80%;
   list-style: none;
-  padding: 0;
+  padding: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.footer-section ul li {
-  margin-bottom: 10px;
+.column-1, .column-2, .column-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 75px;
+  gap: 12px;
 }
 
-.footer-section ul li a {
+a {
   color: white;
   text-decoration: none;
 }
 
-.footer-section ul li a:hover {
+a:hover {
   text-decoration: underline;
   color: white;
 }
 
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-links img {
-  height: 30px;
-  width: auto;
-  color: white;
-}
-
 .footer-bottom {
+  height: 50px;
   background-color: var(--grisclaropastel);
-  color: var(--grisclaropastel);
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 10px 0;
+  justify-content: center;
+  padding-top: 10px;
   font-size: 12px;
   border-top: 1px solid var(--grisoscuropastel);
 }
 
 .politic {
   color: var(--rojopastel);
-}
-
-.follow-me{
-  color: var(--rojopastel);
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .about-liviit{

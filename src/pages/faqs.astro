@@ -1,0 +1,86 @@
+---
+import MainFooter from "../components/Footer/MainFooter.astro";
+import NavBar from "../components/NavBar/NavBar.astro";
+import FaqItem from "../components/FAQS/FaqItem.astro";
+---
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+  body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Questrial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2.19rem;
+  }
+
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .accordion {
+    max-width: 50rem;
+    margin: 6.25rem auto;
+    color: black;
+    background: var(--azulclaropastel);
+    padding: 3.13rem;
+    border-radius: 2%;
+  }
+
+  .accordion hr {
+    width: 100%;
+    margin-left: 0%;
+    border: 0.09rem solid #afb7bb;
+  }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liviit</title>
+</head>
+
+<body>
+  <NavBar />
+  <div class="wrapper">
+    <div class="accordion-body">
+      <div class="accordion">
+        <h1>Preguntas Frecuentes</h1>
+        <hr />
+        <FaqItem
+          id="start"
+          question="¿Cómo puedo comenzar?"
+          answer={`Comenzar con Liviit es fácil y rápido. Haz click en el botón "Empiezar"y comienza a disfrutar de todas las funcionalidades que ofrece nuestro producto.`}
+        />
+        <hr />
+        <FaqItem
+          question="¿Cómo puede ayudarme este producto a organizar mis tareas del hogar?"
+          answer={`Facilita a los estudiantes la organización, priorización y recordatorio de sus tareas
+          domésticas, mejorando así la comunicación entre compañeros de piso y ayudando a prevenir conflictos.`}
+        />
+        <hr />
+        <FaqItem
+          question="¿Quiénes son los responsables de este producto/servicio?"
+          answer={`Este producto ha sido elaborado por un grupo de jóvenes desarrolladores durante su
+          participación en el curso Conecta Empleo x EOI Programación y Diseño Web Frontend. En la página se proporciona más información detallada sobre el perfil del equipo.`}
+        />
+        <hr />
+        <FaqItem
+          question="¿Cuál es el precio de este producto o servicio?"
+          answer={`El servicio es completamente gratuito, pero agradecemos cualquier comentario o sugerencia que deseen enviarnos a través del formulario.`}
+        />
+        <hr />
+        <FaqItem
+          question="¿Qué tipo de asistencia o atención al cliente proporcionan?"
+          answer={`Para establecer comunicación con nosotros, te invitamos a completar el formulario de contacto disponible directamente en nuestra página web. Al proporcionar los detalles solicitados en el
+          formulario, podrás enviar cualquier consulta o comentario que desees compartir con nuestro equipo.`}
+        />
+      </div>
+    </div>
+  </div>
+  <MainFooter />
+</body>

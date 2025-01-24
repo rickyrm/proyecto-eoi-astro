@@ -1,0 +1,85 @@
+---
+const { question, answer } = Astro.props;
+---
+
+<script>
+  const accordions = document.querySelectorAll("[data-accordion-button]");
+
+  for (let i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function () {
+      this.parentElement.classList.toggle("active");
+    });
+  }
+</script>
+
+<div class="container">
+  <div data-accordion-button class="question">
+    {question}
+    <span class="icon open-icon">+</span>
+    <span class="icon close-icon">-</span>
+  </div>
+  <div class="answer">{answer}</div>
+</div>
+
+<style>
+  .question {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .answer {
+    text-align: justify;
+    font-size: 1.25rem;
+  }
+
+  .container {
+    position: relative;
+    margin: 0.75rem;
+  }
+
+  .question {
+    position: relative;
+    padding: 0.63rem 0;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .answer {
+    position: relative;
+    height: 0;
+    font-size: 1.25rem;
+    text-align: justify;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .icon {
+    color: black;
+    font-size: 2.19rem;
+  }
+
+  .container.active .answer {
+    height: 4.38rem;
+    overflow-y: auto;
+  }
+
+  .container.active .open-icon {
+    display: none;
+  }
+
+  .container.active .close-icon {
+    display: block;
+  }
+
+  .container .open-icon {
+    display: block;
+  }
+
+  .container .close-icon {
+    display: none;
+  }
+</style>

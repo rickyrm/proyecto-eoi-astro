@@ -1,4 +1,52 @@
-
+<script>
+    document.querySelectorAll(".button").forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-target"); // Obtén el valor de data-target
+        const id = button.id; // Obtén el id del botón
+        const currentURL = `${window.location.protocol}//${window.location.host}`; // Construye dinámicamente la URL base
+  
+        // Si tiene un data-target y es una de las tres primeras secciones
+        if (target && ["home", "about", "about-us"].includes(target)) {
+          // Redirige a index.astro con el hash de la sección
+          window.location.href = `${currentURL}#${target}`;
+        } 
+        // Si es un botón que lleva a otra página
+        else if (["faqs", "contact", "login", "registrer"].includes(id)) {
+          let url;
+          switch (id) {
+            case "faqs":
+              url = "/faqs"; // Página de FAQS
+              break;
+            case "contact":
+              url = "/contact"; // Página de contacto
+              break;
+            case "login":
+              url = "/login"; // Página de inicio de sesión
+              break;
+            case "registrer":
+              url = "/registrer"; // Página de registro
+              break;
+            default:
+              url = "/"; // Por si acaso
+          }
+          window.location.href = url; // Redirige a la página correspondiente
+        }
+      });
+    });
+  
+    // Detecta si hay un hash en la URL para hacer scroll automático al cargar
+    window.addEventListener("load", () => {
+      const hash = window.location.hash; // Obtén el hash de la URL
+      if (hash) {
+        const section = document.querySelector(hash); // Busca la sección correspondiente
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" }); // Desplaza suavemente a la sección
+        }
+      }
+    });
+  </script>
+  
+  
 
 <header class="web-header">
     <h1>Liviit</h1>

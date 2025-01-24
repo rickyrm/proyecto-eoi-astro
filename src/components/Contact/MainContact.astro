@@ -1,8 +1,18 @@
+<script>
+  document.querySelectorAll(".button-contact").forEach(button => {
+    button.addEventListener("click", () => {
+      window.location.href = "/contact";
+    });
+  });
+</script>
+
 <section class="contact">
-  <h1>¡Contacta con nosotros!</h1>
-  <h3>¿Tienes algún problema?</h3>
-  <p>Puedes contactarnos a través del siguiente formulario</p>
-  <button class="button-contact" id="contact">Contacto</button>
+  <div class="card">
+    <h1>¡Contacta con nosotros!</h1>
+    <h3>¿Tienes algún problema?</h3>
+    <p>Puedes contactarnos a través del siguiente formulario</p>
+    <button class="button-contact" id="contact">Contacto</button>
+  </div>
 </section>
 <p></p>
 
@@ -31,6 +41,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 50%;
+  border-radius: 12px;
+  background-color: white;
+  /* Añadimos sombra para el efecto 3D */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Añadimos una ligera transformación para hacer que parezca flotante */
+  transform: translateY(-4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto cuando se pasa el ratón por encima (hover) */
+.card:hover {
+  transform: translateY(-8px); /* Hace que la tarjeta suba un poco más */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
 }
 
 .contact .button-contact {

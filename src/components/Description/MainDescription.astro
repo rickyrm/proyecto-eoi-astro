@@ -5,15 +5,25 @@
         </div>
     </div>
     <div class="item-2">
-        <h3>En búsqueda de tu bienestar...</h3>
-        <p>Esta app ha sido creada por un grupo de estudiantes del curso de Conecta EmpleoxEOI Programación y Diseño Web
-            Frontend (Gran Canaria) con la finalidad de facilitar la convivencia y la organización en los pisos
-            estudiantiles.</p>
+      <div class="header">
+        <h3>¡Haz que tu hogar funcione sin estrés con Liviit!</h3>
+      </div>
+      <div class="content">
+        <p>Con Liviit, repartir tareas ya no es un problema.</p>
         <ul>
-            <li>Añadir tareas a un calendario.</li>
-            <li>Marcar tareas como completadas.</li>
-            <li>Repartir tareas aleatoriamente.</li>
+            <li><b>Tareas repartidas de forma justa y aleatoria.</b></li>
+            <p></p>
+            <li><b>Establece fechas límite para que todo se haga a tiempo.</b></li>
+            <p></p>
+            <li><b>Lleva el control de lo que se ha hecho y lo que falta</b></li>
+            <p></p>
+            <li><b>Chatea con tus compañeros de piso desde un solo lugar</b></li>
         </ul>
+        <p>Organiza tu hogar de manera fácil y sin complicaciones.</p>
+      </div>
+      <div class="footer">
+        <a href="/login.html">¡Comienza con Liviit hoy!</a>
+      </div>
     </div>
 </section>
 
@@ -80,43 +90,66 @@
 }
 
 .description .item-2 {
-  height: 600px;
   width: 50%;
+  padding-left: 32px;
+  padding-right: 24px;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.description .item-2 h3 {
+.description .item-2 .header {
+  
+
+}
+
+.description .item-2 .header h3 {
+  font-size: 24px;
+  
+}
+
+.description .item-2 .content {
   display: flex;
-  flex-direction: row;
-  padding-left: 40px;
-  padding-right: 40px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.description .item-2 .content p {
+  font-size: 24px;
+
+}
+
+.description .item-2 .content ul {
+  list-style-type: none;
+  
+}
+
+.description .item-2 .content ul li {
+  font-size: 16px;
+
+  &::before {
+  content: '\2713'; /* Unicode para el símbolo de check */
+  color: green; /* El color del check */
+  margin-right: 8px; /* Espacio entre el check y el texto */
+}
+
+}
+
+.description .item-2 .footer {
+
+}
+
+.description .item-2 .footer a {
+  font-size: 30px;
   color: var(--rojopastel);
-}
-
-.description .item-2 p {
   display: flex;
-  flex-direction: row; 
-  padding-left: 40px;
-  padding-right: 40px;
-  color: var(--rojopastel);
-}
-
-.description .item-2 ul {
-  display: flex;
-  flex-direction: column; 
-  padding-left: 80px; 
-  padding-right: 80px; 
-  margin: 0;
-  color: var(--rojopastel); 
-  list-style-type: disc;
-}
-
-.description .item-2 ul li {
-  margin-bottom: 10px; 
-  font-size: 1em;
-  line-height: 1.5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
 }
 
 </style>

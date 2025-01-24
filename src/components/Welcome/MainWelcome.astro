@@ -2,28 +2,15 @@
 import ButtonJoin from "./ButtonJoin.astro"
 ---
 
-<script>
-  document.querySelectorAll(".button").forEach(button => {
-  button.addEventListener("click", () => {
-    const sectionId = button.getAttribute("data-target"); // Usa data-target directamente
-    const section = document.querySelector(`#${sectionId}`);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-</script>
-
 <section id="home" class="welcome">
   <div class="title">
     <h1>Liviit</h1>
     <div style="background-color: transparent;">
-      <img src="/public/images/logo2.png" alt="Logo Liviit"> <!-- Nuevo logo de la app -->
+      <img src="/public/images/logo2.png" alt="Logo Liviit">
     </div>
   </div>
   <h3>Porque la convivencia no tiene que ser complicada.</h3>
-  </ButtonJoin>
+  <ButtonJoin/ >
 </section>
 
 
