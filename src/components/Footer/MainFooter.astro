@@ -182,4 +182,94 @@ a:hover {
 .separator {
   color: transparent
 }
+
+@media screen and (max-width: 768px) {
+  .web-footer {
+    height: auto; 
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column; /* Cambiar a disposición vertical */
+    height: auto;
+    width: 100%;
+    gap: 6px;
+    justify-content: none;
+  }
+
+  .footer-about, 
+  .footer-links {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el contenido */
+    padding: 0px;
+    height: auto;
+  }
+
+  .footer-about {
+    padding: 10px 20px;
+
+    p {
+      padding: 0px 12px;
+    }
+  }
+
+  .footer-links ul {
+    flex-direction: column; /* Enlaces en columna */
+    gap: 0px; /* Espacio entre columnas */
+    padding: 0px;
+    padding-bottom: 8px;
+  }
+
+  .footer-links .column-1, 
+  .footer-links .column-2, 
+  .footer-links .column-3 {
+    flex-direction: column; /* Cada columna en una sola fila */
+    align-items: center;
+    gap: 6px; /* Espacio entre elementos */
+    height: auto;
+  }
+
+  h2 {
+    font-size: 18px; /* Tamaño ajustado */
+  }
+
+  p, ul {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-about, 
+  .footer-links {
+    padding: 0px; /* Espacio interno reducido */
+  }
+
+  .footer-about p {
+    font-size: 12px; /* Texto más pequeño */
+  }
+
+  .footer-links ul {
+    gap: 5px; /* Menor espacio entre enlaces */
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 10px; /* Ajuste para la parte inferior */
+    padding: 5px;
+  }
+}
+
 </style>
