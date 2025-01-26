@@ -151,4 +151,60 @@
   padding: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  .description {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    width: auto;
+  }
+
+  .description .item-1, 
+  .description .item-2 {
+    width: 100%;
+    padding: 10px 0;
+    height: auto;
+  }
+
+  .description .item-1 .image-description {
+    height: 300px;
+    margin-left: 0;
+    border-radius: 8px;
+  }
+
+  .description .item-1 .image-description h1 {
+    font-size: 24px;
+    height: auto;
+    padding: 16px;
+    width: 90%;
+  }
+
+  .description .item-2 {
+    justify-content: center;
+  }
+
+  .description .item-2 .header h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .description .item-2 .content {
+    gap: 10px;
+  }
+
+  .description .item-2 .content p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .description .item-2 .content ul li {
+    font-size: 14px;
+  }
+
+  .description .item-2 .footer a {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
 </style>

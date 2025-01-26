@@ -1,66 +1,78 @@
 <script>
-    document.querySelectorAll(".button").forEach(button => {
-      button.addEventListener("click", () => {
-        const target = button.getAttribute("data-target"); // Obtén el valor de data-target
-        const id = button.id; // Obtén el id del botón
-        const currentURL = `${window.location.protocol}//${window.location.host}`; // Construye dinámicamente la URL base
-  
-        // Si tiene un data-target y es una de las tres primeras secciones
-        if (target && ["home", "about", "about-us"].includes(target)) {
-          // Redirige a index.astro con el hash de la sección
-          window.location.href = `${currentURL}#${target}`;
-        } 
-        // Si es un botón que lleva a otra página
-        else if (["faqs", "contact", "login", "registrer"].includes(id)) {
-          let url;
-          switch (id) {
-            case "faqs":
-              url = "/faqs"; // Página de FAQS
-              break;
-            case "contact":
-              url = "/contact"; // Página de contacto
-              break;
-            case "login":
-              url = "/login"; // Página de inicio de sesión
-              break;
-            case "registrer":
-              url = "/registrer"; // Página de registro
-              break;
-            default:
-              url = "/"; // Por si acaso
-          }
-          window.location.href = url; // Redirige a la página correspondiente
-        }
-      });
-    });
-  
-    // Detecta si hay un hash en la URL para hacer scroll automático al cargar
-    window.addEventListener("load", () => {
-      const hash = window.location.hash; // Obtén el hash de la URL
-      if (hash) {
-        const section = document.querySelector(hash); // Busca la sección correspondiente
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" }); // Desplaza suavemente a la sección
-        }
+// El botón hamburguesa en el responsive: 
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+// Los botones del nav: 
+document.querySelectorAll(".button").forEach(button => {
+  button.addEventListener("click", () => {
+    
+    const target = button.getAttribute("data-target");
+    const id = button.id; 
+    const currentURL = `${window.location.protocol}//${window.location.host}`;
+
+    if (target && ["home", "about", "about-us"].includes(target)) {
+      window.location.href = `${currentURL}#${target}`;
+    } else if (["faqs", "contact", "login", "registrer"].includes(id)) {
+      let url;
+      switch (id) {
+        case "faqs":
+          url = "/faqs"; 
+          break;
+        case "contact":
+          url = "/contact"; 
+          break;
+        case "login":
+          url = "/login"; 
+          break;
+        case "registrer":
+          url = "/registrer"; 
+          break;
+        default:
+          url = "/"; 
       }
-    });
-  </script>
-  
-  
+      
+      window.location.href = url; 
+      }
+      
+      if (navMenu.classList.contains("open")) {
+      navMenu.classList.remove("open");
+    }
+
+  });
+});
+
+window.addEventListener("load", () => {
+  const hash = window.location.hash; 
+  if (hash) {
+    const section = document.querySelector(hash); 
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+});
+</script>
+
 
 <header class="web-header">
+  <div class="mobile-header">
     <h1>Liviit</h1>
-    <nav class="buttons" aria-label="Menú de navegación principal">
-        <button class="button" data-target="home">Home</button>
-        <button class="button" data-target="about">Sobre la app</button>
-        <button class="button" data-target="about-us">Sobre nosotros</button>
-        <button class="button" id="faqs">FAQS</button>
-        <button class="button" id="contact">Contacto</button>
-        <button class="button" id="login">Iniciar sesión</button>
-        <button class="button" id="registrer">Registrarse</button>
-    </nav>
+    <button id="menu-toggle" aria-label="Abrir menú">☰</button> <!-- Botón hamburguesa -->
+  </div>
+  <nav class="buttons" aria-label="Menú de navegación principal">
+      <button class="button" data-target="home">Home</button>
+      <button class="button" data-target="about">Sobre la app</button>
+      <button class="button" data-target="about-us">Sobre nosotros</button>
+      <button class="button" id="faqs">FAQS</button>
+      <button class="button" id="contact">Contacto</button>
+      <button class="button" id="login">Iniciar sesión</button>
+      <button class="button" id="registrer">Registrarse</button>
+  </nav>
 </header>
-
 
 <style>
 :root {
@@ -85,6 +97,11 @@ flex-direction: row;
 align-items: center;
 }
 
+.mobile-header {
+  display: flex;
+  flex: row;
+}
+
 header h1 {
 font-size: 100px;
 height: 115px;
@@ -97,6 +114,11 @@ text-align: left;
 justify-content: center;
 background-color: transparent;
 }
+
+#menu-toggle {
+  display: none; /* Ocultar en pantallas grandes */
+}
+
 
 nav {
 height: 115px;
@@ -126,6 +148,72 @@ button:hover {
 background-color: var(--rojopastel);
 color: var(--grisclaropastel); 
 cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+  }
+
+  .mobile-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  #menu-toggle {
+    height: 100%;
+    width: 75px;
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--rojopastel);
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    height: 350px;
+    background-color: var(--grisclaropastel);
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Asegura que no se superponga */
+    gap: 10px;
+    padding-top: 50px;
+  }
+
+  nav.open {
+    display: flex; 
+  }
+
+  .button {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .button:hover {
+    background-color: var(--rojopastel);
+    color: var(--grisclaropastel);
+  }
 }
 
 </style>

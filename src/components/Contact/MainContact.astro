@@ -90,4 +90,66 @@
   border: 2px solid var(--rojopastel);
 }
 
+@media screen and (max-width: 768px) {
+  .contact {
+    height: auto; /* Ajuste dinámico de la altura */
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%; /* Más ancho en pantallas pequeñas */
+    padding: 20px; /* Espacio interno para mantener el contenido cómodo */
+  }
+
+  .card h1 {
+    font-size: 24px; /* Tamaño más pequeño para el título */
+    text-align: center;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 14px; 
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact .button-contact {
+    height: 48px;
+    width: 120px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 15px; /* Espacio interno más ajustado */
+  }
+
+  .card h1 {
+    font-size: 20px; /* Ajuste adicional para pantallas muy pequeñas */
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .contact .button-contact {
+    height: 40px;
+    width: 100px;
+    font-size: 12px;
+  }
+}
+
+
   </style>

@@ -67,4 +67,36 @@ import ButtonJoin from "./ButtonJoin.astro"
   margin: 20px 0;
   padding: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .welcome {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, var(--azulclaropastel), var(--grisclaropastel));
+    text-align: center;
+  }
+
+  .welcome .title {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .welcome .title h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .welcome .title img {
+    height: 50px;
+    width: auto;
+  }
+
+  .welcome h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+
 </style>
