@@ -17,7 +17,7 @@ document.querySelectorAll(".button").forEach(button => {
 
     if (target && ["home", "about", "about-us"].includes(target)) {
       window.location.href = `${currentURL}#${target}`;
-    } else if (["faqs", "contact", "login", "registrer"].includes(id)) {
+    } else if (["faqs", "contact", "login", "register"].includes(id)) {
       let url;
       switch (id) {
         case "faqs":
@@ -29,7 +29,7 @@ document.querySelectorAll(".button").forEach(button => {
         case "login":
           url = "https://livitt.netlify.app/"; 
           break;
-        case "registrer":
+        case "register":
           url = "https://livitt.netlify.app/register"; 
           break;
         default:
@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
       <button class="button" id="faqs">FAQS</button>
       <button class="button" id="contact">Contacto</button>
       <button class="button" id="login">Iniciar sesión</button>
-      <button class="button" id="registrer">Registrarse</button>
+      <button class="button" id="register">Registrarse</button>
   </nav>
 </header>
 
